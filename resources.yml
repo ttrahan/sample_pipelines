@@ -1,15 +1,15 @@
 resources:
   - name: nginx-image
     type: image
-    integration: pranay-docker
+    integration: avinci
     source:
       name: "library/nginx"
       isPull: false
       tag: latest
 
-  - name: myEcsCluster
+  - name: demoCluster
     type: ecsCluster
-    integration: pranay-ecs
+    integration: aws-demo
     source:
-      name : "test-cluster" #name of the cluster we are deploying
-      region: "us-west-2"
+      name : "default" #name of the cluster we are deploying
+      region: "us-east-1"

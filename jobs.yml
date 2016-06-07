@@ -1,11 +1,11 @@
 jobs:
-  - name: generate-manifest
+  - name: nginx-man
     type: manifest
     steps:
       - GET nginx-image
 
-  - name: deploy-service
+  - name: nginx-ecs-deploy
     type: ecsDeploy
     steps:
-      - GET generate-manifest
-      - GET myEcsCluster
+      - GET nginx-man
+      - GET demoCluster
