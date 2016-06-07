@@ -4,7 +4,7 @@ jobs:
     steps:
       - GET nginx-image
 
-  - name: nginx-ecs-deploy2
+  - name: nginx-ecs-deploy3
     type: ecsDeploy
     steps:
       - GET nginx-man
