@@ -1,7 +1,7 @@
 resources:
   - name: nginx-image
     type: image
-    integration: avinci
+    integration: avinci-dh
     source:
       name: "library/nginx"
       isPull: false
@@ -9,8 +9,7 @@ resources:
 
   - name: demoCluster
     type: ecsCluster
-    integration: aws-demo
+    integration: ecsCluster
     source:
-      name : "default" #name of the cluster we are deploying
+      name : "prod-aws" #name of the cluster we are deploying
       region: "us-east-1"
-

@@ -9,9 +9,3 @@ jobs:
     steps:
       - GET nginx-man
       - GET demoCluster
-
-  - name: boboo
-    type: ecsDeploy
-    steps:
-      - GET nginx-man
-      - GET demoCluster
