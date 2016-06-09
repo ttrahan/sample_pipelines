@@ -9,7 +9,7 @@ resources:
 
   - name: demoCluster
     type: ecsCluster
-    integration: ecsCluster
+    integration: avi-ecs
     source:
       name : "prod-aws" #name of the cluster we are deploying
       region: "us-east-1"
