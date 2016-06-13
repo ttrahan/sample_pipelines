@@ -2,10 +2,10 @@ jobs:
   - name: nginx-man
     type: manifest
     steps:
-      - GET nginx-image
+      - GET: nginx-image
 
   - name: nginx-ecs-deploy3
     type: ecsDeploy
     steps:
-      - GET nginx-man
-      - GET demoCluster
+      - GET: nginx-man
+      - GET: demoCluster
