@@ -1,19 +1,4 @@
 resources:
-  - name: nginx-image
-    type: image
-    integration: avinci-dh
-    source:
-      name: "library/nginx"
-      isPull: false
-      tag: latest
-
-  - name: demoCluster
-    type: ecsCluster
-    integration: avi-ecs
-    source:
-      name : "prod-aws" #name of the cluster we are deploying
-      region: "us-east-1"
-
   - name: env-prod
     type: ecsCluster
     integration: avi-ecs
