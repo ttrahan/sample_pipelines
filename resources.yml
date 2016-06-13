@@ -63,5 +63,5 @@ resources:
   - name: box-scaler
     type: replicas
     source:
-      count: 1
+      count: 2
 
