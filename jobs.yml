@@ -15,7 +15,7 @@ jobs:
     steps:
       - GET: dv-image
       - GET: dv-opts
-      - GET: dv-image
+      - GET: dv-params
 
   - name: dv-test
     type: ecsDeploy
