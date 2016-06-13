@@ -36,7 +36,7 @@ resources:
       isPull: false
       tag: "master.12"
 
-  - name: box
+  - name: box-image
     type: image
     integration: avinci-dh
     source:
@@ -44,7 +44,7 @@ resources:
       isPull: false
       tag: "master.35"
 
-  - name: dv-params #test once more
+  - name: dv-params
     type: params
     source:
       params:
@@ -57,3 +57,26 @@ resources:
       cpu-shares: 256
       portMappings:
         - 80:80
+
+  - name: box-params
+    type: params
+    source:
+      params:
+        DB_HOST: "ds015700.mlab.com"
+        DB_NAME: "ayeaye"
+        DB_PORT: "15700"
+        DB_USERNAME: "aye0aye"
+        DB_PASSWORD: "aye0aye"
+        ENVIRONMENT: "test-aws"
+
+  - name: box-opts
+    type: dockerOptions
+    source:
+      memory: 64
+      cpu-shares: 512
+
+  - name: box-scaler
+    type: replicas
+    source:
+      count: 2
+
