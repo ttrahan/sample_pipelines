@@ -9,3 +9,16 @@ jobs:
     steps:
       - GET: nginx-man
       - GET: demoCluster
+
+  - name: dv-man
+    type: manifest
+    steps:
+      - GET: dv-image
+      - GET: dv-opts
+      - GET: dv-image
+
+  - name: dv-test
+    type: ecsDeploy
+    steps:
+      - GET: dv-man
+      - GET: env-test

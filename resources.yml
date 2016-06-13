@@ -13,3 +13,47 @@ resources:
     source:
       name : "prod-aws" #name of the cluster we are deploying
       region: "us-east-1"
+
+  - name: env-prod
+    type: ecsCluster
+    integration: avi-ecs
+    source:
+      name : "prod-aws" #name of the cluster we are deploying
+      region: "us-east-1"
+
+  - name: env-test
+    type: ecsCluster
+    integration: avi-ecs
+    source:
+      name : "test-aws" #name of the cluster we are deploying
+      region: "us-east-1"
+
+  - name: dv-image
+    type: image
+    integration: avinci-dh
+    source:
+      name: "aye0aye/dv"
+      isPull: false
+      tag: "master.12"
+
+  - name: box
+    type: image
+    integration: avinci-dh
+    source:
+      name: "aye0aye/box"
+      isPull: false
+      tag: "master.35"
+
+  - name: dv-params #test once more
+    type: params
+    source:
+      params:
+        MONGO_API_URL: "https://api.mlab.com/api/1/databases/ayeaye/collections/boxes?apiKey=9hYmSC1dYH1CBu2PjBB5Vi5ff6OJyD9x"
+
+  - name: dv-opts
+    type: dockerOptions
+    source:
+      memory: 64
+      cpu-shares: 256
+      portMappings:
+        - 80:80
