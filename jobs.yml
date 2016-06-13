@@ -7,5 +7,6 @@ jobs:
   - name: nginx-ecs-deploy3
     type: ecsDeploy
     steps:
-      - GET nginx-man
-      - GET demoCluster
+      - GET: nginx-man
+      - GET: demoCluster
+      
