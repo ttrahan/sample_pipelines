@@ -68,3 +68,10 @@ resources:
     source:
       params:
         ENVIRONMENT: "test-prod"
+
+  - name: env-prod
+    type: ecsCluster
+    integration: avi-ecs
+    source:
+      name : "prod-aws" #name of the cluster we are deploying
+      region: "us-east-1"

@@ -25,3 +25,11 @@ jobs:
     steps:
       - GET: box-man
       - GET: env-test
+
+  - name: box-prod
+    type: ecsDeploy
+    steps:
+      - GET: box-prod-params
+      - GET: box-test
+      - GET: env-prod
+      - GET: box-prod-scaler
