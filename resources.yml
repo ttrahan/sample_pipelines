@@ -31,7 +31,7 @@ resources:
   - name: dv-scaler
     type: replicas
     source:
-      count: 2
+      count: 1
 
   - name: box-image
     type: image
