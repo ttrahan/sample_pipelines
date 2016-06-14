@@ -39,7 +39,7 @@ resources:
     source:
       name: "aye0aye/box"
       isPull: false
-      tag: "master.50"
+      tag: "master.51"
 
 # Docker Image Options resource for BOX
   - name: box-img-opts
