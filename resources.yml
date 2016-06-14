@@ -13,14 +13,6 @@ resources:
       name : "test-aws" #name of the cluster we are deploying
       region: "us-east-1"
 
-  - name: dv-image
-    type: image
-    integration: avinci-dh
-    source:
-      name: "aye0aye/dv"
-      isPull: false
-      tag: "master.12"
-
   - name: dv-params
     type: params
     source:
@@ -42,3 +34,11 @@ resources:
       cpu-shares: 256
       portMappings:
         - 80:80
+
+  - name: dv-image
+    type: image
+    integration: avinci-dh
+    source:
+      name: "aye0aye/dv"
+      isPull: false
+      tag: "master.12"
