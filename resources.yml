@@ -61,7 +61,7 @@ resources:
   - name: box-prod-scaler
     type: replicas
     source:
-      count: 3
+      count: 1
 
   - name: box-prod-params
     type: params
