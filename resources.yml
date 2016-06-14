@@ -34,3 +34,11 @@ resources:
       cpu-shares: 256
       portMappings:
         - 80:80
+
+  - name: dv-opts-02
+    type: dockerOptions
+    source:
+      memory: 64
+      cpu-shares: 256
+      portMappings:
+        - 80:80
