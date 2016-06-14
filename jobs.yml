@@ -18,11 +18,10 @@ jobs:
     steps:
       - GET: box-image
       - GET: box-opts
-      - GET: box-params
+      - GET: box-test-params
 
   - name: box-test
     type: ecsDeploy
     steps:
       - GET: box-man
       - GET: env-test
-      - GET: box-scaler
