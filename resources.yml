@@ -31,7 +31,7 @@ resources:
   - name: dv-scaler
     type: replicas
     source:
-      count: 2
+      count: 1
 
   - name: box-image
     type: image
@@ -61,7 +61,7 @@ resources:
   - name: box-prod-scaler
     type: replicas
     source:
-      count: 1
+      count: 3
 
   - name: box-prod-params
     type: params
