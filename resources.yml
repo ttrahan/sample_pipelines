@@ -41,6 +41,12 @@ resources:
       isPull: false
       tag: "master.35"
 
+  - name: box-opts
+    type: dockerOptions
+    source:
+      memory: 64
+      cpu-shares: 512
+
   - name: box-test-params
     type: params
     source:
@@ -51,12 +57,6 @@ resources:
         DB_USERNAME: "aye0aye"
         DB_PASSWORD: "aye0aye"
         ENVIRONMENT: "test-aws"
-
-  - name: box-opts
-    type: dockerOptions
-    source:
-      memory: 64
-      cpu-shares: 512
 
   - name: box-prod-scaler
     type: replicas
