@@ -39,7 +39,7 @@ resources:
     source:
       name: "aye0aye/box"
       isPull: false
-      tag: "master.35"
+      tag: "master.34"
 
   - name: box-opts
     type: dockerOptions
