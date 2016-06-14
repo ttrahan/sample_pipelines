@@ -61,13 +61,13 @@ resources:
   - name: box-prod-scaler
     type: replicas
     source:
-      count: 3
+      count: 1
 
   - name: box-prod-params
     type: params
     source:
       params:
-        ENVIRONMENT: "dev-aws"
+        ENVIRONMENT: "prod-aws"
 
   - name: env-prod
     type: ecsCluster
