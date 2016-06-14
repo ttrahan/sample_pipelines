@@ -10,8 +10,7 @@ jobs:
     type: ecsDeploy
     steps:
       - GET: dv-man
-      - GET: env-test
-      - GET: dv-scaler
+      - GET: env-test-aws
 
   - name: box-man
     type: manifest

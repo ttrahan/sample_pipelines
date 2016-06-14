@@ -28,11 +28,6 @@ resources:
       portMappings:
         - 80:80
 
-  - name: dv-scaler
-    type: replicas
-    source:
-      count: 1
-
   - name: box-image
     type: image
     integration: avinci-dh
