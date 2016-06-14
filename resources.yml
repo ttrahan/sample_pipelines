@@ -1,5 +1,5 @@
 resources:
-  - name: env-test
+  - name: env-test-aws
     type: ecsCluster
     integration: avi-ecs
     source:
@@ -39,7 +39,7 @@ resources:
     source:
       name: "aye0aye/box"
       isPull: false
-      tag: "master.34"
+      tag: "master.50"
 
   - name: box-opts
     type: dockerOptions
@@ -47,7 +47,7 @@ resources:
       memory: 64
       cpu-shares: 512
 
-  - name: box-test-params
+  - name: box-t-params
     type: params
     source:
       params:
@@ -57,21 +57,3 @@ resources:
         DB_USERNAME: "ayeaye"
         DB_PASSWORD: "ayeaye"
         ENVIRONMENT: "dev-aws"
-
-  - name: box-prod-scaler
-    type: replicas
-    source:
-      count: 1
-
-  - name: box-prod-params
-    type: params
-    source:
-      params:
-        ENVIRONMENT: "prod-aws"
-
-  - name: env-prod
-    type: ecsCluster
-    integration: avi-ecs
-    source:
-      name : "prod-aws" #name of the cluster we are deploying
-      region: "us-east-1"
