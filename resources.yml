@@ -32,3 +32,30 @@ resources:
       params:
         MONGO_API_URL: "https://api.mlab.com/api/1/databases/ayeaye/collections/boxes?apiKey=9hYmSC1dYH1CBu2PjBB5Vi5ff6OJyD9x"
 
+# Docker Image resource for BOX
+  - name: box-img
+    type: image
+    integration: avinci-dh
+    source:
+      name: "aye0aye/box"
+      isPull: false
+      tag: "master.51"
+
+# Docker Image Options resource for BOX
+  - name: box-img-opts
+    type: dockerOptions
+    source:
+      memory: 64
+      cpu-shares: 512
+
+# TEST env vars resource for BOX
+  - name: box-t-params
+    type: params
+    source:
+      params:
+        DB_HOST: "ds015700.mlab.com"
+        DB_NAME: "ayeaye"
+        DB_PORT: "15700"
+        DB_USERNAME: "ayeaye"
+        DB_PASSWORD: "ayeaye"
+        ENVIRONMENT: "test-aws"
