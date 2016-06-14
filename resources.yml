@@ -1,11 +1,4 @@
 resources:
-  - name: env-prod
-    type: ecsCluster
-    integration: avi-ecs
-    source:
-      name : "prod-aws" #name of the cluster we are deploying
-      region: "us-east-1"
-
   - name: env-test
     type: ecsCluster
     integration: avi-ecs
@@ -42,3 +35,10 @@ resources:
       name: "aye0aye/dv"
       isPull: false
       tag: "master.12"
+
+  - name: env-prod
+    type: ecsCluster
+    integration: avi-ecs
+    source:
+      name : "prod-aws" #name of the cluster we are deploying
+      region: "us-east-1"
