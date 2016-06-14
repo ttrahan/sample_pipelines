@@ -56,7 +56,7 @@ resources:
         DB_PORT: "15700"
         DB_USERNAME: "aye0aye"
         DB_PASSWORD: "aye0aye"
-        ENVIRONMENT: "prod-aws"
+        ENVIRONMENT: "dev-aws"
 
   - name: box-prod-scaler
     type: replicas
