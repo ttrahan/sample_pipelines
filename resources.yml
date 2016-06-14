@@ -32,3 +32,39 @@ resources:
     type: replicas
     source:
       count: 2
+
+  - name: box-image
+    type: image
+    integration: avinci-dh
+    source:
+      name: "aye0aye/box"
+      isPull: false
+      tag: "master.35"
+
+  - name: box-test-params
+    type: params
+    source:
+      params:
+        DB_HOST: "ds015700.mlab.com"
+        DB_NAME: "ayeaye"
+        DB_PORT: "15700"
+        DB_USERNAME: "aye0aye"
+        DB_PASSWORD: "aye0aye"
+        ENVIRONMENT: "test-aws"
+
+  - name: box-opts
+    type: dockerOptions
+    source:
+      memory: 64
+      cpu-shares: 512
+
+  - name: box-prod-scaler
+    type: replicas
+    source:
+      count: 1
+
+  - name: box-prod-params
+    type: params
+    source:
+      params:
+        ENVIRONMENT: "test-prod"
