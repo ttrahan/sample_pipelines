@@ -70,9 +70,3 @@ resources:
     source:
       params:
         ENVIRONMENT: "test-prod"
-
-  - name: foo-params
-    type: params
-    source:
-      params:
-        ENVIRONMENT: "test-prod"
