@@ -22,7 +22,7 @@ jobs:
       - GET: box-img-opts
 
 # TEST deployment job for BOX
-  - name: box-t-beta
+  - name: box-test-aws
     type: ecsDeploy
     steps:
       - GET: box-man
