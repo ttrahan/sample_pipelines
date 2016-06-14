@@ -1,23 +1,27 @@
 jobs:
+# manifest generation job for visualizer
   - name: dv-man
     type: manifest
     steps:
-      - GET: dv-image
-      - GET: dv-opts
-      - GET: dv-params
+      - GET: dv-img
+      - GET: dv-img-opts
 
+# deployment job for visualizer
   - name: dv-test
     type: ecsDeploy
     steps:
       - GET: dv-man
+      - GET: dv-params
       - GET: env-test-aws
 
+# manifest generation job for BOX
   - name: box-man
     type: manifest
     steps:
-      - GET: box-image
-      - GET: box-opts
+      - GET: box-img
+      - GET: box-img-opts
 
+# TEST deployment job for BOX
   - name: box-t-beta
     type: ecsDeploy
     steps:
