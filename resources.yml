@@ -54,8 +54,8 @@ resources:
         DB_HOST: "ds015700.mlab.com"
         DB_NAME: "ayeaye"
         DB_PORT: "15700"
-        DB_USERNAME: "aye0aye"
-        DB_PASSWORD: "aye0aye"
+        DB_USERNAME: "ayeaye"
+        DB_PASSWORD: "ayeaye"
         ENVIRONMENT: "dev-aws"
 
   - name: box-prod-scaler
@@ -67,7 +67,7 @@ resources:
     type: params
     source:
       params:
-        ENVIRONMENT: "prod-aws"
+        ENVIRONMENT: "dev-aws"
 
   - name: env-prod
     type: ecsCluster
