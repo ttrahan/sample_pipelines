@@ -28,3 +28,7 @@ resources:
       portMappings:
         - 80:80
 
+  - name: dv-scaler
+    type: replicas
+    source:
+      count: 1
