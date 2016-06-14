@@ -31,4 +31,4 @@ resources:
   - name: dv-scaler
     type: replicas
     source:
-      count: 1
+      count: 2
