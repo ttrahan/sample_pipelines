@@ -26,7 +26,7 @@ jobs:
       - GET: box-man
       - GET: env-test
 
-  - name: box-prod
+  - name: box-prod-01
     type: ecsDeploy
     steps:
       - GET: box-prod-params
