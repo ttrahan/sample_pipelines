@@ -11,3 +11,10 @@ jobs:
     steps:
       - GET: dv-man
       - GET: env-test
+
+  - name: box-man
+    type: manifest
+    steps:
+      - GET: box-image
+      - GET: box-opts
+      - GET: box-params
