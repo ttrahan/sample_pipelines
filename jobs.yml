@@ -11,3 +11,4 @@ jobs:
     steps:
       - GET: dv-man
       - GET: env-test
+      - GET: dv-scaler
