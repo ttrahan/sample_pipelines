@@ -5,4 +5,10 @@ resources:
     source:
       name : "prod-aws" #name of the cluster we are deploying
       region: "us-east-1"
-      
+
+  - name: env-test
+    type: ecsCluster
+    integration: avi-ecs
+    source:
+      name : "test-aws" #name of the cluster we are deploying
+      region: "us-east-1"
