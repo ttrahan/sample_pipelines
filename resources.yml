@@ -26,11 +26,3 @@ resources:
     source:
       params:
         MONGO_API_URL: "https://api.mlab.com/api/1/databases/ayeaye/collections/boxes?apiKey=9hYmSC1dYH1CBu2PjBB5Vi5ff6OJyD9x"
-
-  - name: dv-opts
-    type: dockerOptions
-    source:
-      memory: 64
-      cpu-shares: 256
-      portMappings:
-        - 80:80
