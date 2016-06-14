@@ -32,5 +32,3 @@ jobs:
       - GET: box-prod-params
       - GET: box-test
       - GET: env-prod
-      - GET: box-prod-scaler
-      
