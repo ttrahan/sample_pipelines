@@ -31,5 +31,6 @@ jobs:
     steps:
       - GET: box-prod-params
       - GET: box-test
+        trigger: false
       - GET: env-prod
       - GET: box-prod-scaler
