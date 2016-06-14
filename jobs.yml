@@ -1,0 +1,15 @@
+jobs:
+# manifest generation job for visualizer
+  - name: dv-man
+    type: manifest
+    steps:
+      - GET: dv-img
+      - GET: dv-img-opts
+
+# deployment job for visualizer
+  - name: dv-test
+    type: ecsDeploy
+    steps:
+      - GET: dv-man
+      - GET: dv-params
+      - GET: env-test-aws
