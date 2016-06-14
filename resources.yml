@@ -65,3 +65,8 @@ resources:
     source:
       count: 1
 
+  - name: box-prod-params
+    type: params
+    source:
+      params:
+        ENVIRONMENT: "test-prod"

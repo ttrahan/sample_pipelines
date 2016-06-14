@@ -29,5 +29,7 @@ jobs:
   - name: box-prod
     type: ecsDeploy
     steps:
+      - GET: box-prod-params
       - GET: box-test
       - GET: env-prod
+      
