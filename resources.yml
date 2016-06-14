@@ -1,3 +1,4 @@
+resources:
 # TEST AWS cluster resource for deploying microservices
   - name: env-test-aws
     type: ecsCluster
